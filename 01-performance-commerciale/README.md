@@ -69,6 +69,57 @@ Pour comparer des périodes équivalentes, chaque année est mesurée de janvier
 
 **Conclusion :** TheLook gagne plus parce qu'elle reçoit davantage de commandes, et non parce que ses clients dépensent plus à chaque achat. L'augmentation du panier moyen représente donc un levier de croissance encore inexploité.
 
+### Questions 2 et 3 : chiffre d'affaires et rentabilité par catégorie
+
+Période analysée : du 1er septembre 2025 au 31 août 2026 ([requête 02](sql/02_performance_par_categorie.sql)). Le taux de marge correspond à la marge brute (prix de vente moins coût d'achat) divisée par le chiffre d'affaires.
+
+Sur cette période, TheLook réalise **2,92 millions de dollars** de chiffre d'affaires pour **1,52 million de dollars** de marge brute, soit un taux de marge moyen de **52,0 %**.
+
+<details>
+<summary><b>Voir le tableau complet des 26 catégories</b></summary>
+
+| Catégorie | Articles vendus | Chiffre d'affaires | Marge brute | Taux de marge | Part du CA |
+|---|---:|---:|---:|---:|---:|
+| Outerwear & Coats | 2 469 | 362 596 $ | 200 859 $ | 55,4 % | 12,4 % |
+| Jeans | 3 484 | 339 103 $ | 157 764 $ | 46,5 % | 11,6 % |
+| Sweaters | 2 903 | 217 750 $ | 113 112 $ | 51,9 % | 7,5 % |
+| Suits & Sport Coats | 1 407 | 178 946 $ | 107 147 $ | 59,9 % | 6,1 % |
+| Swim | 3 114 | 176 858 $ | 87 427 $ | 49,4 % | 6,1 % |
+| Fashion Hoodies & Sweatshirts | 3 158 | 169 807 $ | 81 797 $ | 48,2 % | 5,8 % |
+| Sleep & Lounge | 3 061 | 153 615 $ | 79 573 $ | 51,8 % | 5,3 % |
+| Shorts | 3 022 | 142 685 $ | 71 235 $ | 49,9 % | 4,9 % |
+| Active | 2 413 | 130 426 $ | 75 670 $ | 58,0 % | 4,5 % |
+| Tops & Tees | 3 069 | 125 456 $ | 55 087 $ | 43,9 % | 4,3 % |
+| Intimates | 3 647 | 122 992 $ | 57 799 $ | 47,0 % | 4,2 % |
+| Dresses | 1 518 | 120 484 $ | 65 967 $ | 54,8 % | 4,1 % |
+| Pants | 1 958 | 117 908 $ | 63 718 $ | 54,0 % | 4,0 % |
+| Accessories | 2 697 | 109 342 $ | 65 437 $ | 59,8 % | 3,7 % |
+| Blazers & Jackets | 810 | 77 602 $ | 48 257 $ | 62,2 % | 2,7 % |
+| Maternity | 1 384 | 71 092 $ | 39 810 $ | 56,0 % | 2,4 % |
+| Underwear | 2 091 | 56 181 $ | 29 788 $ | 53,0 % | 1,9 % |
+| Pants & Capris | 895 | 47 286 $ | 22 350 $ | 47,3 % | 1,6 % |
+| Plus | 1 159 | 45 735 $ | 22 922 $ | 50,1 % | 1,6 % |
+| Suits | 285 | 32 390 $ | 12 856 $ | 39,7 % | 1,1 % |
+| Socks | 1 636 | 31 271 $ | 12 449 $ | 39,8 % | 1,1 % |
+| Skirts | 594 | 31 030 $ | 18 661 $ | 60,1 % | 1,1 % |
+| Leggings | 863 | 20 860 $ | 8 303 $ | 39,8 % | 0,7 % |
+| Socks & Hosiery | 998 | 16 303 $ | 9 752 $ | 59,8 % | 0,6 % |
+| Jumpsuits & Rompers | 285 | 14 348 $ | 6 714 $ | 46,8 % | 0,5 % |
+| Clothing Sets | 61 | 5 624 $ | 2 121 $ | 37,7 % | 0,2 % |
+| **Total** | **48 981** | **2 917 690 $** | **1 516 575 $** | **52,0 %** | **100 %** |
+
+</details>
+
+**Constats :**
+
+- **Un chiffre d'affaires concentré.** Sur 26 catégories, Outerwear & Coats et Jeans réalisent à elles seules 24 % du chiffre d'affaires, et les cinq premières 44 %.
+- **Outerwear & Coats, la catégorie la plus stratégique.** Première en chiffre d'affaires (362 596 $), elle affiche aussi un taux de marge supérieur à la moyenne (55,4 %) et génère 13 % de la marge brute totale.
+- **Jeans, un volume élevé mais une rentabilité faible.** Deuxième en chiffre d'affaires, elle a l'un des taux de marge les plus bas du catalogue (46,5 %). Au taux de marge moyen, elle rapporterait environ 18 500 $ de marge supplémentaire sur l'année.
+- **Des catégories très rentables encore peu développées.** Blazers & Jackets (62,2 %), Suits & Sport Coats (59,9 %), Accessories (59,8 %) et Active (58,0 %) dégagent parmi les meilleures marges, mais ne représentent ensemble que 17 % du chiffre d'affaires.
+- **Des petites catégories peu rentables.** Tops & Tees (43,9 %), Socks, Leggings et Suits (environ 39,8 %) ainsi que Clothing Sets (37,7 %) ont les taux de marge les plus faibles.
+
+**Conclusion :** la rentabilité de TheLook repose sur un nombre limité de catégories. Deux leviers se dégagent : améliorer la marge des Jeans, en renégociant les coûts d'achat ou en ajustant les prix, et développer les catégories à forte marge comme Blazers & Jackets, Suits & Sport Coats et Accessories. Les Accessories rejoignent d'ailleurs la piste de la question 1 : proposés en complément d'un achat, ils augmenteraient à la fois le panier moyen et la marge.
+
 
 ## Outils
 
