@@ -27,6 +27,22 @@ Le chiffre d'affaires progresse, mais la direction ne sait pas précisément où
 | `products` | Les produits (catégorie, marque, coût d'achat, prix) |
 | `users` | Les clients (pays, âge, date d'inscription) |
 
+
+Avant l'analyse, j'ai exploré les statuts des articles commandés ([requête 00](sql/00_exploration_des_statuts.sql)).
+
+**Constats :**
+
+- 15 % des articles ont été annulés et 10 % retournés, soit environ 25 % du montant total des commandes.
+- Les données couvrent la période du 13/01/2019 au 19/09/2026 et contiennent des commandes datées dans le futur.
+
+**Règles retenues :**
+
+- **Chiffre d'affaires** : seuls les articles livrés (Complete), expédiés (Shipped) ou en préparation (Processing) sont comptés. Les articles annulés ou retournés sont exclus, car ils n'ont généré aucun revenu.
+- **Période** : l'analyse s'arrête au 31/08/2026, dernier mois complet.
+- **Évolution du chiffre d'affaires** : analysée sur tout l'historique (janvier 2019 - août 2026).
+- **Catégories, rentabilité, retours et pays** : analysés sur les 12 derniers mois complets (septembre 2025 - août 2026), la période la plus utile pour préparer le budget de l'année prochaine.
+
+
 ## Outils
 
 - **BigQuery (SQL)** : préparation et analyse des données
